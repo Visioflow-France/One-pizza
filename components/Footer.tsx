@@ -1,0 +1,158 @@
+import Link from 'next/link';
+import { LINKS } from '@/lib/links';
+import { UberEatsLogo, DeliverooLogo } from './BrandLogos';
+import { SocialFollow } from './SocialFollow';
+
+export function Footer() {
+  return (
+    <footer className="footer" id="contact">
+      <div className="footer-grid">
+        <div className="footer-brand">
+          <div className="logo">
+            ONE PIZZA
+            <br />
+            SAINT-DENIS
+          </div>
+          <p className="tagline">
+            Pizzeria halal à Saint-Denis : pizzas classiques et signatures
+            cuites au feu de bois, calzones et desserts maison. À emporter,
+            sur place ou en livraison, au cœur de Saint-Denis — 7 jours sur 7.
+          </p>
+          <div className="footer-social">
+            <a href={LINKS.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" data-cursor-hover>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href={LINKS.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" data-cursor-hover>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+              </svg>
+            </a>
+          </div>
+          <div className="footer-order">
+            <span className="footer-order-label">Commander en ligne</span>
+            <div className="footer-order-row">
+              <a
+                href={LINKS.uberEats}
+                target="_blank"
+                rel="noreferrer"
+                className="footer-order-btn footer-order-btn--uber"
+                aria-label="Commander sur Uber Eats"
+                data-cursor-hover
+              >
+                <UberEatsLogo className="footer-order-logo" />
+              </a>
+              <a
+                href={LINKS.deliveroo}
+                target="_blank"
+                rel="noreferrer"
+                className="footer-order-btn footer-order-btn--deliveroo"
+                aria-label="Commander sur Deliveroo"
+                data-cursor-hover
+              >
+                <DeliverooLogo className="footer-order-logo" />
+                <span>Deliveroo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-col">
+          <h2 className="footer-col-title">Contact &amp; localisation à Saint-Denis</h2>
+          <ul>
+            <li>
+              <a
+                href={LINKS.addressQuery}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor-hover
+              >
+                10 Rue Clovis Hugues
+                <br />
+                93200 Saint-Denis
+              </a>
+            </li>
+            <li>
+              <a href={LINKS.phoneHref} data-cursor-hover>01 48 21 06 64</a>
+            </li>
+            <li>
+              <a
+                href={LINKS.addressQuery}
+                target="_blank"
+                rel="noreferrer"
+                className="footer-map-link"
+                data-cursor-hover
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Itinéraire Maps
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="footer-col">
+          <h2 className="footer-col-title">Horaires d'ouverture</h2>
+          <div className="hours-line"><span className="day">Lun — Dim</span><span className="time">7j/7</span></div>
+          <div className="hours-line"><span className="day">Midi</span><span className="time">11h30 — 14h30</span></div>
+          <div className="hours-line"><span className="day">Soir</span><span className="time">18h00 — 23h00</span></div>
+          <div className="hours-line closed"><span className="day">Drive</span><span className="time">Sur place</span></div>
+        </div>
+
+        <div className="footer-col">
+          <h2 className="footer-col-title">Navigation</h2>
+          <ul>
+            <li><Link href="/#story" data-cursor-hover>Le Concept</Link></li>
+            <li><Link href="/carte" data-cursor-hover>La Carte</Link></li>
+            <li><Link href="/carte" data-cursor-hover>Commander en ligne</Link></li>
+            <li><Link href="/histoire" data-cursor-hover>Histoire</Link></li>
+            <li><Link href="/#reviews" data-cursor-hover>Avis Clients</Link></li>
+            <li><Link href="/#contact" data-cursor-hover>Nous Trouver</Link></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="footer-map">
+        <iframe
+          title="Localisation d'One Pizza Saint-Denis sur Google Maps"
+          src={LINKS.mapsEmbed}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
+
+      <SocialFollow />
+
+      <div className="footer-huge">ONE PIZZA</div>
+
+      <div className="footer-bottom">
+        <div>© 2026 One Pizza Saint-Denis — Tous droits réservés</div>
+        {/* flex-wrap nécessaire : sans lui, la rangée de liens légaux fait
+            ~330 px de large et déborde de l'écran sur les mobiles ≤ 320 px. */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
+          <Link href="/mentions-legales" data-cursor-hover>Mentions légales</Link>
+          <Link href="/cgv" data-cursor-hover>CGV</Link>
+          <Link href="/confidentialite" data-cursor-hover>Confidentialité</Link>
+          <Link href="/cookies" data-cursor-hover>Cookies</Link>
+        </div>
+      </div>
+
+      <div className="footer-credit">
+        <a
+          href="https://visioflow.fr"
+          target="_blank"
+          rel="noreferrer"
+          data-cursor-hover
+        >
+          Site réalisé par <strong>visioflow.fr</strong>
+        </a>
+      </div>
+    </footer>
+  );
+}

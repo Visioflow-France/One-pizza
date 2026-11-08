@@ -1,0 +1,138 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { gsap } from 'gsap';
+import { LINKS } from '@/lib/links';
+import { UberEatsLogo, DeliverooLogo } from './BrandLogos';
+
+// Image de fond du hero, servie de façon responsive via <picture> :
+//  - mobile  (<= 767px) : hero-mobile.webp  (1920px, ~64 KB, q90 + unsharp)
+//  - desktop (>= 768px) : hero-desktop.webp (1920px, 66 KB, q92)
+// Mobile : pleine résolution de la source (l'ancienne version 900px était
+// étirée ~5× en hauteur par object-fit: cover sur écran portrait, d'où un
+// flou notable) + léger renforcement de netteté qui compense l'agrandissement
+// restant (~2,4×) fait par le navigateur. Cadrage et poids inchangés côté
+// desktop.
+const HERO_IMG_MOBILE = '/pizzeria-hero-mobile.webp';
+const HERO_IMG_DESKTOP = '/pizzeria-hero-desktop.webp';
+
+export function Hero() {
+  const bgRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (bgRef.current) {
+        // Simple fondu : pas de zoom, l'image reste visible en entier.
+        gsap.from(bgRef.current, {
+          opacity: 0,
+          duration: 1.4,
+          ease: 'expo.out',
+        });
+      }
+      if (titleRef.current) {
+        gsap.to(titleRef.current.querySelectorAll('.line > span'), {
+          y: 0,
+          duration: 1.2,
+          ease: 'expo.out',
+          stagger: 0.12,
+          delay: 0.3,
+        });
+      }
+    });
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section className="hero" id="hero">
+      <div className="hero-bg" ref={bgRef}>
+        <picture>
+          {/* Bureau — écrans >= 768px : image haute définition (~1600px) */}
+          <source media="(min-width: 768px)" srcSet={HERO_IMG_DESKTOP} />
+          {/* Mobile — écrans <= 767px : image optimisée (~800px) */}
+          {/* LCP : eager + fetchpriority=high (préchargée dans le <head> du
+              layout) — jamais de lazy-loading sur le visuel du hero. */}
+          <img
+            src={HERO_IMG_MOBILE}
+            alt="Pizza au feu de bois de la pizzeria One Pizza Saint-Denis — 10 Rue Clovis Hugues, 93200"
+            className="hero-bg-img"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
+      </div>
+      <div className="hero-overlay"></div>
+
+      <div className="hero-content">
+        <div className="hero-eyebrow">Pizzeria halal à Saint-Denis · Pizzas cuites au feu de bois · Sur place, à emporter, en livraison</div>
+        <h1 className="hero-title" ref={titleRef}>
+          <span className="line"><span>ONE</span></span>
+          <span className="line"><span>PIZZA</span></span>
+          {/* Complément sémantique lu par Google et les lecteurs d'écran,
+              invisible à l'écran pour préserver le design. */}
+          <span className="sr-only">
+            {' '}— pizzeria halal à Saint-Denis : pizzas au feu de bois à emporter,
+            sur place ou en livraison, 7j/7
+          </span>
+        </h1>
+        <p className="hero-subtitle">
+          Cuites au feu de bois. Dévorées en un instant.
+        </p>
+        <div className="hero-rule" aria-hidden />
+        <div className="hero-ctas">
+          <a
+            href={LINKS.phoneHref}
+            className="order-btn order-btn--phone"
+            data-cursor-hover
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" className="order-btn-logo">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>Appeler · {LINKS.phone}</span>
+            <span className="btn-arrow">→</span>
+          </a>
+          <a
+            href={LINKS.uberEats}
+            target="_blank"
+            rel="noreferrer"
+            className="order-btn order-btn--uber"
+            data-cursor-hover
+          >
+            <UberEatsLogo className="order-btn-logo" />
+            <span>Uber Eats</span>
+            <span className="btn-arrow">→</span>
+          </a>
+          <a
+            href={LINKS.deliveroo}
+            target="_blank"
+            rel="noreferrer"
+            className="order-btn order-btn--deliveroo"
+            data-cursor-hover
+          >
+            <DeliverooLogo className="order-btn-logo" />
+            <span>Deliveroo</span>
+            <span className="btn-arrow">→</span>
+          </a>
+          <Link href="/carte" className="btn" data-cursor-hover>
+            Commander sur le site <span className="btn-arrow">→</span>
+          </Link>
+        </div>
+      </div>
+
+      <div className="hero-meta">
+        <strong>OUVERT 7J/7</strong>
+        <br />
+        11h30 — 14h30
+        <br />
+        18h00 — 23h00
+      </div>
+
+      <div className="hero-scroll">
+        <span className="line-vert"></span>
+        Scroll
+      </div>
+    </section>
+  );
+}

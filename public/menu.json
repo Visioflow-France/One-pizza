@@ -1,0 +1,302 @@
+{
+  "items": [
+    {
+      "id": "margherita",
+      "name": "Margherita",
+      "desc": "Sauce tomate, mozzarella fiordilatte, basilic frais.",
+      "price": 8,
+      "priceMenu": 10.5,
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "tag": "Végétarienne",
+      "bestseller": true,
+      "order": 11
+    },
+    {
+      "id": "reine",
+      "name": "Reine",
+      "desc": "Sauce tomate, mozzarella, champignons, jambon halal.",
+      "price": 9.5,
+      "priceMenu": 12,
+      "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "bestseller": true,
+      "order": 12
+    },
+    {
+      "id": "quatre-fromages",
+      "name": "Quatre Fromages",
+      "desc": "Mozzarella, emmental, chèvre, gorgonzola, miel.",
+      "price": 10.5,
+      "priceMenu": 13,
+      "image": "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "tag": "Végétarienne",
+      "order": 13
+    },
+    {
+      "id": "chorizo",
+      "name": "Chorizo Halal",
+      "desc": "Sauce tomate, mozzarella, chorizo halal, poivrons.",
+      "price": 10.5,
+      "priceMenu": 13,
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "tag": "Épicée",
+      "order": 14
+    },
+    {
+      "id": "orientale",
+      "name": "Orientale",
+      "desc": "Sauce tomate, mozzarella, merguez halal, oignons, poivrons.",
+      "price": 11,
+      "priceMenu": 13.5,
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "order": 15
+    },
+    {
+      "id": "poulet-grille",
+      "name": "Poulet Grillé",
+      "desc": "Sauce tomate, mozzarella, poulet grillé, poivrons grillés.",
+      "price": 10.5,
+      "priceMenu": 13,
+      "image": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "order": 16
+    },
+    {
+      "id": "thon",
+      "name": "Thon",
+      "desc": "Sauce tomate, mozzarella, thon, olives noires, oignons.",
+      "price": 10.5,
+      "priceMenu": 13,
+      "image": "https://images.unsplash.com/photo-1548369937-47519963cabb?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "order": 17
+    },
+    {
+      "id": "veggie",
+      "name": "Végétarienne",
+      "desc": "Sauce tomate, mozzarella, légumes grillés, olives, basilic.",
+      "price": 9.5,
+      "priceMenu": 12,
+      "image": "https://images.unsplash.com/photo-1548369937-47519963cabb?w=800&auto=format&fit=crop&q=80",
+      "category": "classiques",
+      "tag": "Végétarienne",
+      "order": 18
+    },
+    {
+      "id": "one-pizza",
+      "name": "La One Pizza",
+      "desc": "Crème, mozzarella, poulet grillé, chorizo halal, poivrons, olives.",
+      "price": 13.9,
+      "promoPrice": 11.9,
+      "priceMenu": 16.5,
+      "image": "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "tag": "Signature",
+      "bestseller": true,
+      "isNew": true,
+      "order": 21
+    },
+    {
+      "id": "truffade",
+      "name": "Truffade",
+      "desc": "Crème, pommes de terre, reblochon, lardons de dinde fumés.",
+      "price": 12.9,
+      "priceMenu": 15.5,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "tag": "Signature",
+      "order": 22
+    },
+    {
+      "id": "cheddar-burger",
+      "name": "Cheddar Burger",
+      "desc": "Sauce tomate, viande hachée halal, cheddar, oignons, sauce burger.",
+      "price": 12.5,
+      "priceMenu": 15,
+      "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "tag": "Signature",
+      "order": 23
+    },
+    {
+      "id": "bbq-chicken",
+      "name": "BBQ Chicken",
+      "desc": "Crème BBQ, poulet grillé, mozzarella, oignons rouges, maïs.",
+      "price": 12.5,
+      "priceMenu": 15,
+      "image": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "tag": "Signature",
+      "isNew": true,
+      "order": 24
+    },
+    {
+      "id": "kebab",
+      "name": "Kebab",
+      "desc": "Crème, mozzarella, viande kebab halal, oignons rouges, tomates.",
+      "price": 11.9,
+      "priceMenu": 14.5,
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "order": 25
+    },
+    {
+      "id": "buffalo",
+      "name": "Buffalo",
+      "desc": "Crème, poulet pané sauce buffalo, mozzarella, oignons.",
+      "price": 12.5,
+      "priceMenu": 15,
+      "image": "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "tag": "Épicée",
+      "isNew": true,
+      "order": 26
+    },
+    {
+      "id": "tartiflette",
+      "name": "Tartiflette",
+      "desc": "Crème, pommes de terre, reblochon, lardons de dinde, oignons.",
+      "price": 12.9,
+      "priceMenu": 15.5,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "order": 27
+    },
+    {
+      "id": "pepperoni-love",
+      "name": "Pepperoni Love",
+      "desc": "Sauce tomate, double pepperoni halal, mozzarella, origan.",
+      "price": 11.9,
+      "priceMenu": 14.5,
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop&q=80",
+      "category": "signatures",
+      "tag": "Signature",
+      "order": 28
+    },
+    {
+      "id": "calzone-classique",
+      "name": "Calzone Classique",
+      "desc": "Jambon halal, champignons, mozzarella, sauce tomate maison.",
+      "price": 9.9,
+      "priceMenu": 12.5,
+      "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=800&auto=format&fit=crop&q=80",
+      "category": "calzones",
+      "order": 31
+    },
+    {
+      "id": "calzone-chevre",
+      "name": "Calzone Chèvre-Miel",
+      "desc": "Chèvre, mozzarella, miel, noix — sauce tomate maison.",
+      "price": 10.9,
+      "priceMenu": 13.5,
+      "image": "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=800&auto=format&fit=crop&q=80",
+      "category": "calzones",
+      "tag": "Végétarienne",
+      "order": 32
+    },
+    {
+      "id": "calzone-poulet",
+      "name": "Calzone Poulet",
+      "desc": "Poulet grillé, poivrons, mozzarella, sauce tomate maison.",
+      "price": 11.5,
+      "priceMenu": 14,
+      "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=800&auto=format&fit=crop&q=80",
+      "category": "calzones",
+      "order": 33
+    },
+    {
+      "id": "d-tiramisu",
+      "name": "Tiramisu Maison",
+      "desc": "Mascarpone, café, cacao — la recette italienne.",
+      "price": 4.5,
+      "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&auto=format&fit=crop&q=80",
+      "category": "desserts",
+      "order": 51
+    },
+    {
+      "id": "d-fondant",
+      "name": "Fondant Chocolat",
+      "desc": "Cœur coulant au chocolat noir, servi tiède.",
+      "price": 4,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&auto=format&fit=crop&q=80",
+      "category": "desserts",
+      "order": 52
+    },
+    {
+      "id": "d-cookie",
+      "name": "Cookie Maison",
+      "desc": "Pépites de chocolat, cœur moelleux.",
+      "price": 2.5,
+      "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&auto=format&fit=crop&q=80",
+      "category": "desserts",
+      "order": 53
+    },
+    {
+      "id": "d-glace",
+      "name": "Glace 2 Boules",
+      "desc": "Parfums au choix, chantilly maison.",
+      "price": 3.5,
+      "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&auto=format&fit=crop&q=80",
+      "category": "desserts",
+      "order": 54
+    },
+    {
+      "id": "boisson-33",
+      "name": "Soda 33 cl",
+      "desc": "Canette fraîche au choix.",
+      "price": 2,
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=800&auto=format&fit=crop&q=80",
+      "category": "boissons",
+      "order": 61
+    },
+    {
+      "id": "boisson-2l",
+      "name": "Soda 2 L",
+      "desc": "Bouteille familiale au choix.",
+      "price": 4,
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=800&auto=format&fit=crop&q=80",
+      "category": "boissons",
+      "order": 62
+    },
+    {
+      "id": "eau-50",
+      "name": "Eau 50 cl",
+      "desc": "Eau plate ou gazeuse.",
+      "price": 1.5,
+      "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf40?w=800&auto=format&fit=crop&q=80",
+      "category": "boissons",
+      "order": 63
+    },
+    {
+      "id": "citronnade",
+      "name": "Citronnade Maison",
+      "desc": "Citron pressé, menthe fraîche, glace pilée.",
+      "price": 3.5,
+      "image": "https://images.unsplash.com/photo-1438638531655-25cb4c1f0d3e?w=800&auto=format&fit=crop&q=80",
+      "category": "boissons",
+      "order": 64
+    },
+    {
+      "id": "menu-enfant",
+      "name": "Menu Enfant",
+      "desc": "Pizza ou mini calzone + boisson 33 cl + dessert.",
+      "price": 6.9,
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&auto=format&fit=crop&q=80",
+      "category": "menus",
+      "order": 71
+    },
+    {
+      "id": "menu-duo",
+      "name": "Menu Duo",
+      "desc": "2 pizzas classiques + 2 boissons 33 cl.",
+      "price": 24.9,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&auto=format&fit=crop&q=80",
+      "category": "menus",
+      "order": 72
+    }
+  ]
+}
